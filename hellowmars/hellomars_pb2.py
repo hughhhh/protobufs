@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='helloworld',
   syntax='proto3',
   serialized_options=_b('\n\032io.grpc.examples.hellomarsB\016HelloMarsProtoP\001\242\002\003HLM'),
-  serialized_pb=_b('\n\x0fhellomars.proto\x12\nhelloworld\x1a\x1cgoogle/api/annotations.proto\"\x1c\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t2h\n\tHelloMars\x12[\n\x08SayHello\x12\x18.helloworld.HelloRequest\x1a\x16.helloworld.HelloReply\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/v1/{name=hello/*}:\x01*B4\n\x1aio.grpc.examples.hellomarsB\x0eHelloMarsProtoP\x01\xa2\x02\x03HLMb\x06proto3')
+  serialized_pb=_b('\n\x0fhellomars.proto\x12\nhelloworld\x1a\x1cgoogle/api/annotations.proto\"\x1c\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t2e\n\tHelloMars\x12X\n\x08SayHello\x12\x18.helloworld.HelloRequest\x1a\x16.helloworld.HelloReply\"\x1a\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/{name=hello/*}B4\n\x1aio.grpc.examples.hellomarsB\x0eHelloMarsProtoP\x01\xa2\x02\x03HLMb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -116,7 +116,7 @@ _HELLOMARS = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   serialized_start=122,
-  serialized_end=226,
+  serialized_end=223,
   methods=[
   _descriptor.MethodDescriptor(
     name='SayHello',
@@ -125,7 +125,7 @@ _HELLOMARS = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_HELLOREQUEST,
     output_type=_HELLOREPLY,
-    serialized_options=_b('\202\323\344\223\002\027\"\022/v1/{name=hello/*}:\001*'),
+    serialized_options=_b('\202\323\344\223\002\024\022\022/v1/{name=hello/*}'),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_HELLOMARS)

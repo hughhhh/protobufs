@@ -27,8 +27,7 @@ service HelloMars {
   // Sends a greeting
   rpc SayHello (HelloRequest) returns (HelloReply) {
     option (google.api.http) = {
-      post: "/v1/{name=hello/*}"
-      body: "*"
+      get: "/v1/{name=hello/*}"
     };
  }
 }
