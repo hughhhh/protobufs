@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='helloworld',
   syntax='proto3',
   serialized_options=_b('\n\032io.grpc.examples.hellomarsB\016HelloMarsProtoP\001\242\002\003HLM'),
-  serialized_pb=_b('\n\x0fhellomars.proto\x12\nhelloworld\"\x1c\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t2K\n\tHelloMars\x12>\n\x08SayHello\x12\x18.helloworld.HelloRequest\x1a\x16.helloworld.HelloReply\"\x00\x42\x34\n\x1aio.grpc.examples.hellomarsB\x0eHelloMarsProtoP\x01\xa2\x02\x03HLMb\x06proto3')
-)
+  serialized_pb=_b('\n\x0fhellomars.proto\x12\nhelloworld\x1a\x1cgoogle/api/annotations.proto\"\x1c\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t2h\n\tHelloMars\x12[\n\x08SayHello\x12\x18.helloworld.HelloRequest\x1a\x16.helloworld.HelloReply\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/v1/{name=hello/*}:\x01*B4\n\x1aio.grpc.examples.hellomarsB\x0eHelloMarsProtoP\x01\xa2\x02\x03HLMb\x06proto3')
+  ,
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 
 
@@ -51,8 +53,8 @@ _HELLOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31,
-  serialized_end=59,
+  serialized_start=61,
+  serialized_end=89,
 )
 
 
@@ -82,8 +84,8 @@ _HELLOREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61,
-  serialized_end=90,
+  serialized_start=91,
+  serialized_end=120,
 )
 
 DESCRIPTOR.message_types_by_name['HelloRequest'] = _HELLOREQUEST
@@ -113,8 +115,8 @@ _HELLOMARS = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=92,
-  serialized_end=167,
+  serialized_start=122,
+  serialized_end=226,
   methods=[
   _descriptor.MethodDescriptor(
     name='SayHello',
@@ -123,7 +125,7 @@ _HELLOMARS = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_HELLOREQUEST,
     output_type=_HELLOREPLY,
-    serialized_options=None,
+    serialized_options=_b('\202\323\344\223\002\027\"\022/v1/{name=hello/*}:\001*'),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_HELLOMARS)
