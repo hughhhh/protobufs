@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+import "google/protobuf/descriptor.proto";
+
+package http;
+
+
+message HttpServerOptions {
+    // Is this an http server
+    bool isHttpServer = 1;
+
+    // Overrides the service name when generating Python Flask clients
+    // The default behavior is to use the proto file's package name as
+    // the host.
+    string name = 2;
+}
+
+extend google.protobuf.ServiceOptions {
+    HttpServerOptions http_server_options = 50002;
+}
+
+// Represents the protobuf message type of an error that may be returned for
+// a given HTTP status code.
+message HttpStatusError {
+    // The status code for which this error is valid.
+    int32 code = 1;
+
+    // Fully qualified protobuf name of the error message that may be used with
+    // the status code.
+    // If protobuf supported generics, this would essentially be a
+    // T: Message.Type & Error.
+    // Consumers will deserialize based on the type name (i.e., foo.bar.Error).
+    string type = 2;
+}
+
+message HttpOptions {
+    // URL path to the HTTP endpoint.
+    string path = 1;
+
+    // The HTTP verb/action, (i.e., GET, POST etc.).
+    string method = 2;
+
+    // The application code that implements the endpoint.
+    string impl = 3;
+
+    // List of errors by status code that may be returned by the endpoint.
+    repeated HttpStatusError error_overrides = 4;
+
+    // Single error that may be returned by the endpoint (not specific to
+    // status code).
+    string error_type = 5;
+}
+
+extend google.protobuf.MethodOptions {
+    HttpOptions http_options = 50001;
+}
