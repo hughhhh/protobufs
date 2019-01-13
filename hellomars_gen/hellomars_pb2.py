@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
-from https_test import ext_pb2 as https__test_dot_ext__pb2
+from hnd import ext_pb2 as hnd_dot_ext__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='helloworld',
   syntax='proto3',
   serialized_options=_b('\n\032io.grpc.examples.hellomarsB\016HelloMarsProtoP\001\242\002\003HLM'),
-  serialized_pb=_b('\n\x0fhellomars.proto\x12\nhelloworld\x1a\x1cgoogle/api/annotations.proto\x1a\x14https_test/ext.proto\"\x1c\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t2\xa0\x01\n\tHelloMars\x12\x92\x01\n\x08SayHello\x12\x18.helloworld.HelloRequest\x1a\x16.helloworld.HelloReply\"T\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/{name=hello/*}\x8a\xb5\x18\x0f\n\r/api/v1/hello\x8a\xb5\x18\x06\x12\x04post\x8a\xb5\x18\x19\x1a\x17\x61pp.resources.api.helloB4\n\x1aio.grpc.examples.hellomarsB\x0eHelloMarsProtoP\x01\xa2\x02\x03HLMb\x06proto3')
+  serialized_pb=_b('\n\x0fhellomars.proto\x12\nhelloworld\x1a\x1cgoogle/api/annotations.proto\x1a\rhnd/ext.proto\"\x1c\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t2\xa0\x01\n\tHelloMars\x12\x92\x01\n\x08SayHello\x12\x18.helloworld.HelloRequest\x1a\x16.helloworld.HelloReply\"T\x82\xd3\xe4\x93\x02\x14\x12\x12/v1/{name=hello/*}\x8a\xb5\x18\x0f\n\r/api/v1/hello\x8a\xb5\x18\x06\x12\x04post\x8a\xb5\x18\x19\x1a\x17\x61pp.resources.api.helloB4\n\x1aio.grpc.examples.hellomarsB\x0eHelloMarsProtoP\x01\xa2\x02\x03HLMb\x06proto3')
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,https__test_dot_ext__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,hnd_dot_ext__pb2.DESCRIPTOR,])
 
 
 
@@ -54,8 +54,8 @@ _HELLOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=83,
-  serialized_end=111,
+  serialized_start=76,
+  serialized_end=104,
 )
 
 
@@ -85,8 +85,8 @@ _HELLOREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=113,
-  serialized_end=142,
+  serialized_start=106,
+  serialized_end=135,
 )
 
 DESCRIPTOR.message_types_by_name['HelloRequest'] = _HELLOREQUEST
@@ -116,8 +116,8 @@ _HELLOMARS = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=145,
-  serialized_end=305,
+  serialized_start=138,
+  serialized_end=298,
   methods=[
   _descriptor.MethodDescriptor(
     name='SayHello',
