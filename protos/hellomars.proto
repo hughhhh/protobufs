@@ -21,7 +21,7 @@ option objc_class_prefix = "HLM";
 package helloworld;
 
 import "google/api/annotations.proto";
-import "http/ext.proto";
+import "hnd/ext.proto";
 
 // The greeting service definition.
 service HelloMars {
@@ -31,9 +31,9 @@ service HelloMars {
       get: "/v1/{name=hello/*}"
     };
     // todo: figure how to make this custom package to compile
-    option (http.http_options).path = "/api/v1/hello";
-    option (http.http_options).method = "post";
-    option (http.http_options).impl = "app.resources.api.hello";
+    option (hnd.http_options).path = "/api/v1/hello";
+    option (hnd.http_options).method = "post";
+    option (hnd.http_options).impl = "app.resources.api.hello";
  }
 }
 
