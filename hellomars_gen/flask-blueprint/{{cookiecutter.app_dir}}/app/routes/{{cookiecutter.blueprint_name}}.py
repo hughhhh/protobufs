@@ -1,6 +1,8 @@
 from flask import Blueprint, jsonify, request
 
- 
+# todo: import needed packages
+ # from hellomars_pb2 import HelloRequest
+ # from hellomars_pb2 import HelloMars
 
 {% for service in cookiecutter.services.buffer %}
 blueprint = Blueprint("{{service.service_name}}", __name__)
