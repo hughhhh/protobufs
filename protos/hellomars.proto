@@ -32,7 +32,7 @@ service HelloMars {
     };
     // todo: figure how to make this custom package to compile
     option (hnd.http_options).path = "/api/v1/hello";
-    option (hnd.http_options).method = "post";
+    option (hnd.http_options).method = "POST";
     option (hnd.http_options).impl = "app.resources.api.hello";
  }
 }
