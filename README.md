@@ -15,6 +15,6 @@ $ cd my_app/
 $ flask run
 
 # Check if the app is running properly
-$ curl http://127.0.0.1:5000/
+$ curl http://127.0.0.1:5000/healthcheck
 >> OK
 ```
